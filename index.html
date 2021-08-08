@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    </link>
+
+    <title>Tic Tac Toe</title>
+</head>
+
+<body>
+    <h1 id="msg">Click on the box to start the match</h1>
+    <div>
+        <div class="container">
+
+            <div class="row">
+                <div class="box border_left border_top " id="box1" onclick="fill_x_or_o(this, 0, 0)"></div>
+                <div class="box border_top" id="box2" onclick="fill_x_or_o(this, 0, 1)"></div>
+                <div class="box border_top border_right" id="box3" onclick="fill_x_or_o(this, 0, 2)"></div>
+
+            </div>
+            <div class="row">
+                <div class="box border_left " id="box4" onclick="fill_x_or_o(this, 1, 0)"></div>
+                <div class="box " id="box5" onclick="fill_x_or_o(this, 1, 1)"></div>
+                <div class="box border_right " id="box6" onclick="fill_x_or_o(this, 1, 2)"></div>
+
+            </div>
+            <div class="row">
+
+                <div class="box border_left border_bottom" id="box7" onclick="fill_x_or_o(this, 2, 0)"></div>
+                <div class="box border_bottom" id="box8" onclick="fill_x_or_o(this, 2, 1)"></div>
+                <div class="box border_right border_bottom" id="box9" onclick="fill_x_or_o(this, 2, 2)"></div>
+
+            </div>
+        </div>
+        <div class="win_msg_section " id="win_msg_section">
+            <div id="win_msg"></div>
+            <button class="restart_button" id="restart_button">Restart</button>
+        </div>
+    </div>
+</body>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
