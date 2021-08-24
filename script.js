@@ -61,27 +61,10 @@ function check_win_row(matrix) {
         }
     }
     return won
-        // row for win
-        // if (box_cordinate_matrix[0][0] == box_cordinate_matrix[0][1] && box_cordinate_matrix[0][1] == box_cordinate_matrix[0][2]) {
-        //     won = box_cordinate_matrix[0][0];
-        //     console.log("won in row box_cordinate_matrix[0][0] : ", box_cordinate_matrix[0][0]);
-
-        // }
-        // if (box_cordinate_matrix[1][0] == box_cordinate_matrix[1][1] && box_cordinate_matrix[1][1] == box_cordinate_matrix[1][2]) {
-        //     won = box_cordinate_matrix[1][0];
-        //     // console.log("won in row : ", won);
-
-        // }
-        // if (box_cordinate_matrix[2][0] == box_cordinate_matrix[2][1] && box_cordinate_matrix[2][1] == box_cordinate_matrix[2][2]) {
-        //     won = box_cordinate_matrix[2][0];
-        //     // console.log("won in row : ", won);
-
-        // }
-        // return won
+        
 
 }
-function check_win_col(matrix){
-    console.log("inside check_win_col ");
+function check_win_col(matrix){    
     for(var col = 0; col<3; col++){
         var x = 0;
         var o =0;
@@ -101,20 +84,6 @@ function check_win_col(matrix){
         }
     }
     return won
-    // if (box_cordinate_matrix[0][0] == box_cordinate_matrix[1][0] && box_cordinate_matrix[1][0] == box_cordinate_matrix[2][0]) {
-    //     won = box_cordinate_matrix[0][0];
-    //     console.log("won in col : ", won);
-    // }
-    // if (box_cordinate_matrix[0][1] == box_cordinate_matrix[1][1] && box_cordinate_matrix[1][1] == box_cordinate_matrix[2][1]) {
-    //     won = box_cordinate_matrix[0][1];
-    //     console.log("won in col : ", won);
-    // }
-    // if (box_cordinate_matrix[0][2] == box_cordinate_matrix[1][2] && box_cordinate_matrix[1][2] == box_cordinate_matrix[2][2]) {
-    //     won = box_cordinate_matrix[0][2];
-    //     console.log("won in col : ", won);
-    // }
-    // return won
-
 }
 
 // diagonal
@@ -129,7 +98,7 @@ function check_win_diagonal(matrix){
 }
 
 
-
+// check game is draw or not
 function is_draw() {
     if (clicked == 9 && won == -1) {
         add_show()
@@ -137,7 +106,7 @@ function is_draw() {
     }
     if (won != -1) {     // if game is won excute this block
         add_show()
-        document.getElementById("win_msg").innerHTML = "game is finished! player " + won + " won the game"
+        document.getElementById("win_msg").innerHTML = "player " + won + " won "
     }
 
 }
